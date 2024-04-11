@@ -1,0 +1,80 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Reliv 가이드",
+  "logo": {
+    "dark": "/logo/logo.svg",
+    "light": "/logo/logo.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#7C3AED",
+    "light": "#ab80f3",
+    "dark": "#7C3AED",
+    "anchors": {
+      "from": "#7C3AED",
+      "to": "#ab80f3"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:sales@reliv.ai"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "홈페이지",
+    "url": "https://reliv.ai/"
+  },
+  "tabs": [],
+  "anchors": [
+    {
+      "name": "Reliv 가이드 소개",
+      "icon": "book-open-cover",
+      "url": "introduction"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Reliv 소개",
+      "pages": ["introduction", "getting-started", "product"]
+    },
+    {
+      "group": "Reliv 사용 가이드",
+      "pages": [
+        "guide/create",
+        {
+          "group": "테스트 작성하기",
+          "pages": [
+            "guide/write/write",
+            "guide/write/mutate-actions",
+            "guide/write/action-settings",
+            "guide/write/special-action",
+            "guide/write/variable",
+            "guide/write/env-variable"
+          ]
+        },
+        "guide/action-block",
+        {
+          "group": "액션 고급 사용법",
+          "pages": ["guide/advanced/custom-action"]
+        },
+        "guide/run",
+        "guide/ci"
+      ]
+    },
+    {
+      "group": "REST API",
+      "pages": [
+        "api-reference/authentication",
+        "api-reference/endpoint/post-test-run-sets",
+        "api-reference/endpoint/get-test-run-sets"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/mintlify",
+    "github": "https://github.com/mintlify",
+    "linkedin": "https://www.linkedin.com/company/mintsearch"
+  },
+  "openapi": ["/api-reference/openapi.json"]
+}
