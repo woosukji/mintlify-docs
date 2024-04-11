@@ -22,13 +22,13 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "홈페이지",
+    "name": "Reliv",
     "url": "https://reliv.ai/"
   },
   "tabs": [],
   "anchors": [
     {
-      "name": "Reliv 가이드 소개",
+      "name": "Introduction",
       "icon": "book-open-cover",
       "url": "introduction"
     }
