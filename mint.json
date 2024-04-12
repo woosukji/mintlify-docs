@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Reliv Guide",
+  "name": "Reliv Manual",
   "logo": {
     "dark": "/logo/logo.svg",
     "light": "/logo/logo.svg"
