@@ -21,7 +21,7 @@
   "paths": {
     "/v0/test-run-sets": {
       "post": {
-        "description": "Test Run Set을 생성합니다.",
+        "description": "Creates Test Run Set.",
         "requestBody": {
           "description": "Config for Test Run Set",
           "content": {
@@ -55,7 +55,7 @@
     },
     "/v0/test-run-sets/{id}": {
       "get": {
-        "description": "Test Run Set의 상태를 조회합니다.",
+        "description": "Retrieves status of the Test Run Set.",
         "parameters": [
           {
             "name": "id",

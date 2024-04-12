@@ -1,48 +1,50 @@
 ---
-title: "환경변수"
-description: "자주 쓰이는 텍스트를 환경변수로 저장합니다."
+title: "Environment Variables"
+description: "Save frequently used text as environment variables."
 ---
 
 ---
 
-자주 쓰이는 텍스트를 환경변수로 지정하고, 불러와서 사용할 수 있습니다.
+You can designate frequently used text as environment variables and use them by calling them into your tests.
 
-[변수(Variable)](/guide/write/variable)와 달리, 환경변수는 프로젝트 전체에서 공유되는 변수입니다.
+Unlike [Variables](/guide/write/variable), environment variables are shared across the entire project.
 
-local/dev/prod 등 테스트 실행 환경에 따라 달라질 필요가 있는 값(URL, 계정 ID 등)에 적합합니다.
+They are suitable for values (such as URLs, account IDs, etc.) that need to vary according to the test execution environment (local/dev/prod, etc.).
 
-## 1. 환경변수 설정하기
+## 1. Setting Environment Variables
 
-텍스트 입력창에서, 환경변수로 지정하고자 하는 부분을 드래그하여 선택합니다.
+In the text input field, drag to select the part you wish to set as an environment variable.
 
-**\[Set as Variable\]** 버튼을 클릭하면, 환경변수 설정 팝업을 통해 환경변수를 설정할 수 있습니다.
+Click the **\[Set as Variable\]** button, and you can set it as an environment variable through the setting popup.
 
 <Note>
-  환경변수의 이름은 영문 대소문자, 숫자, 밑줄(\_), 대쉬(\-)만 사용할 수
-  있습니다.
+  Environment variable names can only use uppercase and lowercase letters,
+  numbers, underscores (\_), and dashes (-).
 </Note>
 
 <img src="/assets/write/env-variable/env-variable-set.png" />
 
-## 2. 환경변수 사용하기
+## 2. Using Environment Variables
 
-텍스트 입력창에서 `{` (중괄호)를 입력하면, 환경변수 목록이 나타납니다.
+When you type `{` (curly braces) in a text input field, a list of environment variables will appear.
 
-클릭하여 환경변수를 삽입할 수 있습니다.
+You can click to insert an environment variable.
 
-<Note>환경변수 이름 일부를 입력하여 검색할 수 있습니다.</Note>
+<Note>You can search by typing part of the environment variable name.</Note>
 
 <img src="/assets/write/env-variable/env-variable-use.png" />
 
-## 3. 환경변수 수정하기
+## 3. Editing Environment Variables
 
-프로젝트 화면 최상단의 **\[Settings\]** 탭을 선택하여, 프로젝트 설정 페이지로 이동합니다.
+Select the **\[Settings\]** tab at the top of the project screen to go to the project settings page.
 
-**\[Environment Variables\]** 탭에서, 환경변수를 관리할 수 있습니다.
+In the **\[Environment Variables\]** tab, you can manage your environment variables.
 
 <Note>
-  **\[Add new environment\]** 버튼으로 새로운 환경(environment)을 추가해 <br />
-  다양한 실행 환경(local, dev, prod 등)에 맞게 환경변수를 설정할 수 있습니다.
+  By clicking the **\[Add new environment\]** button, you can add a new
+  environment. <br />
+  Set environment variables to match different execution environments (such as local,
+  dev, prod, etc.).
 </Note>
 
 <img src="/assets/write/env-variable/env-variable-settings.png" />

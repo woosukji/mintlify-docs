@@ -1,44 +1,44 @@
 ---
-title: "변수"
-description: "자주 쓰이는 텍스트를 변수로 저장합니다."
+title: "Variables"
+description: "Save frequently used text as variables."
 ---
 
 ---
 
-테스트 내에서 반복적으로 사용되는 값을 변수로 지정하여 사용할 수 있습니다.
+You can designate and use repeatedly used values as variables within your tests.
 
-[환경변수(Environment Variable)](/guide/write/env-variable)와 달리, 테스트 실행시에만 유지되는 임시적인 변수입니다.
+Unlike [Environment Variables](/guide/write/env-variable), these are temporary variables that are retained only during the execution of the test.
 
-## 1. 변수 생성하기
+## 1. Creating Variables
 
-Reliv 에디터 **[Test Steps]** 패널 우상단 **[+]** 버튼 > **[Add Variable]** 버튼을 눌러 변수를 추가할 수 있습니다.
+You can add a variable by clicking the **\[+\]** button at the top right of the **\[Test Steps\]** panel in the Reliv Editor and then clicking **\[Add Variable\]**.
 
-원하는 변수의 값을 텍스트로 입력하거나, `{` (중괄호)를 입력하여 다양한 종류의 변수를 사용할 수 있습니다.
+You can enter the desired variable value as text, or use various types of variables by typing `{` (curly braces).
 
-- **변수** : 해당 스텝 이전에 정의된 변수의 이름을 입력하여, 변수 값을 사용할 수 있습니다.
-- **환경변수** : 프로젝트 전체에 적용되는, 사전에 정의한 환경변수입니다.
-- **함수** : 특정한 규칙의 문자열을 생성하여 사용할 수 있습니다.
+- **Variable**: Enter the name of a variable defined before the current step.
+- **Environment Variable**: These are predefined variables that apply to the entire project.
+- **Function**: You can use it to generate a string following a specific rule.
 
-현재 지원되는 함수들은 다음과 같습니다.
-| 함수 | 설명 |
-| --- | --- |
-| `random()` | 랜덤한 영문/숫자 문자열을 생성합니다. <br /> 기본값으로 길이 10의 문자열을 생성합니다. <br /> `random(1)` 과 같이 생성 문자열의 길이를 지정할 수 있습니다. |
-| `now()` | 실행 시의 현재 시간 문자열을 생성합니다. <br /> 기본값으로 ISO 8601 포맷의 현재 시간 문자열을 생성합니다. <br /> `now('YYYY-MM-DD')` 와 같이 [day.js 포맷](https://day.js.org/docs/en/parse/string-format)을 입력하여 양식을 지정할 수 있습니다. |
+The functions currently supported are as follows.
+| Function | Description |
+| -------- | ----------- |
+| `random()` | Generates a random alphanumeric string. <br /> By default, it generates a string of length 10. <br /> You can specify the length of the string to be generated, like `random(1)`. |
+| `now()` | Generates the current time string at the time of execution. <br /> By default, it generates the current time string in ISO 8601 format. <br /> You can specify the format by entering a [day.js format](https://day.js.org/docs/en/parse/string-format), like `now('YYYY-MM-DD')`. |
 
 <img src="/assets/write/variable/variable-set.png" />
 
-## 2. 변수 사용하기
+## 2. Using Variables
 
-텍스트 입력창에서 `{` (중괄호)를 입력하면, 변수/환경변수/함수 목록이 나타납니다.
+When you type `{` (curly braces) in a text input field, a list of variables/environment variables/functions will appear.
 
-클릭하여 변수를 삽입할 수 있습니다.
+You can click to insert a variable.
 
 <Note>
-  각 액션블록은 고유한 변수목록(namespace)을 가집니다. <br />
-  한 액션블록(또는 최상위 레벨)에서 정의한 변수는, 내부에 포함된 액션블록에서 인식되지
-  않습니다. <br />
-  액션블록 외부의 변수를 액션블록 내부에서 사용하고 싶다면, [액션블록
-  파라미터](/guide/action-block#3)를 사용하세요.
+  Each action block has its own namespace for variables. <br />
+  Variables defined in one action block (or the top-level) are not recognized inside
+  another action block. <br />
+  If you want to use a variable from outside an action block inside it, use
+  [action block parameters](/guide/action-block#3).
 </Note>
 
 <img src="/assets/write/env-variable/env-variable-use.png" />

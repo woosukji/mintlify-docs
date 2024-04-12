@@ -1,45 +1,45 @@
 ---
-title: "커스텀 액션"
-description: "코드를 통해 액션을 정의할 수 있습니다."
+title: "Custom Actions"
+description: "You can define actions through code."
 ---
 
 ---
 
-보다 유연하고 다양한 테스트 작성을 위해, **Playwright 기반의 코드로 액션을 정의할 수 있습니다**.
+For more flexible and diverse test writing, **you can define actions using Playwright-based code**.
 
-## 1. 커스텀 액션 생성하기
+## 1. Creating Custom Actions
 
-Reliv 에디터 **\[Test Steps\]** 패널 우상단 **\[+\] 버튼 > \[Add Custom Action\]** 버튼을 눌러 커스텀 액션을 추가할 수 있습니다.
+You can add a custom action by clicking the **\[+\] button > \[Add Custom Action\]** button at the top right of the **\[Test Steps\]** panel in the Reliv Editor.
 
-커스텀 액션의 **\[>\]** (상세보기) 버튼을 클릭하여 코드를 작성할 수 있습니다.
+Click the **\[>\]** (detail view) button on the custom action to write the code.
 
 <img src="/assets/advanced/custom-action/custom-action.png" />
 
-## 2. 커스텀 액션 코드 작성하기
+## 2. Writing Custom Action Code
 
-다음과 같은 playwright object들을 custom code 내에서 사용할 수 있습니다.
+The following Playwright objects can be used within custom code:
 
 - [browser](https://playwright.dev/docs/api/class-browser)
 - [context](https://playwright.dev/docs/api/class-browsercontext)
 - [page](https://playwright.dev/docs/api/class-page)
 - [expect](https://playwright.dev/docs/test-assertions)
 
-자세한 API 설명은 [Playwright Docs](https://playwright.dev/docs/locators)를 참고하시기 바랍니다.
+For detailed API descriptions, please refer to the [Playwright Docs](https://playwright.dev/docs/locators).
 
-## 3. 커스텀 액션 코드 예시 Reference
+## 3. Custom Action Code Examples Reference
 
 #### Click
 
 ```jsx
-await page.getByRole("button", { name: "구매" }).click();
+await page.getByRole("button", { name: "Buy" }).click();
 
-await page.locator("nav").getByRole("link", { name: "튜터" }).click();
+await page.locator("nav").getByRole("link", { name: "Tutor" }).click();
 ```
 
 #### Fill
 
 ```jsx
-await page.locator(`input[value="Reliv 초등학교"]`).fill("Reliv 중학교");
+await page.locator(`input[value="Reliv one"]`).fill("Reliv two");
 ```
 
 #### Hover
@@ -68,10 +68,10 @@ await expect(page).toHaveURL(/https:\/\/google\.com\/products/);
 ```jsx
 const clipboardText = await page.evaluate("navigator.clipboard.readText()");
 
-// 클립보드 값이 대상 텍스트를 포함하는지 체크
+// Check if the clipboard value contains the target text
 expect(clipboardText).toContain("text");
 
-// 클립보드 값이 정확히 일치하는지 체크
+// Check if the clipboard value matches exactly
 expect(clipboardText).toEqual("equalText");
 ```
 
@@ -90,7 +90,7 @@ await page
 ```jsx
 const pagePromise = context.waitForEvent("page");
 
-const googleBtn = page.getByAltText("구글로그인").click();
+const googleBtn = page.getByAltText("Google Login").click();
 
 const newPage = await pagePromise;
 await expect(newPage).toHaveTitle(/Google/);

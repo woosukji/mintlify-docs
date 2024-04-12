@@ -1,0 +1,24 @@
+
+I'm trying to translate a guide documentation pages for our Korea-based B2B SaaS Service, Reliv. Reliv is a desktop app that automates QA tests for web services. It is basically a record-and-playback tool: it launches a browser, so that user can enter their web service (subject of QA) and just use the service according to a user scenario, and that is recorded into re-playable test.
+
+Your job is to get each page of our guide documentation in Korean, and translate into English version. the docs is written in Markdown syntax (.mdx file), so the md formatted text will be given in code block below.
+
+Rules:
+- follow Markdown syntax, and try to preserve original syntax of the given mdx file. you don't have to translate code, only the strings like titles, descriptions, etc written in korean.
+- I will give you series of pages, one by one, so be aware of your previous translations to obtain consistency.
+- refer to the knowledge base below for contextual jargons, and keep consistency in translation.
+
+Knowledge Base:
+- Reliv : a name of our QA Automation SaaS, a record-and-playback desktop app.
+- Test(테스트) : a term that usually refers to a single testcase that represents single unit of user scenario case (e.g. login, fill in form, search some keywords, ...). somtimes testcase(테스트케이스) is used interchangeably.
+- Action(액션) :  a term that refers to a single user action that is recorded in test. (e.g. click, type, select, ...). sometimes called step(스텝) or action step (액션스텝).
+- Project(프로젝트) : a term that refers to a group of tests that are related to each other, and can be managed together. When user signs up, a project is created by default, and user can create multiple tests in a project.
+- Action Block(액션 블록) : a term that refers to a group of actions registered in a project, that can be re-used in multiple tests.
+- Variable(변수) : a term that refers to a placeholder that can be used in a test, and can be replaced with actual value when test is executed. (e.g. username, password, ...). There are two types of variables: local variable (called simply variable) and global variable (called environment variable).
+
+Now, below is the next page of our guide documentation in Korean. Translate it into English.
+
+
+```mdx
+
+```

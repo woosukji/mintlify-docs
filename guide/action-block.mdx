@@ -1,55 +1,58 @@
 ---
-title: "액션블록"
-description: "자주 쓰이는 액션들을 한 번에 추가할 수 있습니다."
+title: "Action Blocks"
+description: "You can add frequently used actions all at once."
 ---
 
 ---
 
-테스트 시나리오에서 반복적으로 사용되는 일련의 액션들을 묶어서 액션블록으로 저장하고, 한 번에 추가할 수 있습니다.
+You can save a series of actions that are repeatedly used in test scenarios as an action block and add them all at once.
 
-## 1. 액션블록 생성하기
+## 1. Creating Action Blocks
 
-액션블록으로 묶고 싶은 범위를 `Shift` 키를 눌러 선택합니다.
+Select the range of actions you want to group into an action block by pressing the `Shift` key.
 
-**액션 범위 우클릭 > \[Create Action Block\]** 버튼을 눌러 액션블록을 생성합니다.
+Right-click on the action range and click **\[Create Action Block\]** to create an action block.
 
-액션블록의 이름을 설정합니다.
+Set a name for the action block.
 
 <Note>
-  액션블록의 이름 또는 내부 액션을 수정한 뒤에는, <br />
-  액션블록 상단의 **[Update]** 버튼을 눌러 변경사항을 다른 테스트에 반영합니다.
+  After modifying the name of the action block or the actions within it, <br />
+  click the **\[Update\]** button to apply the changes to other tests.
 </Note>
 
 <img src="/assets/action-block/create-action-block.png" />
 
-## 2. 액션블록 사용하기
+## 2. Using Action Blocks
 
-Reliv 에디터 **\[Test Steps\]** 패널 우상단 **\[+\] 버튼 > \[Add Action Block\]** 버튼을 눌러 액션블록을 추가할 수 있습니다.
+You can add an action block by clicking the **\[+\] button > \[Add Action Block\]** button at the top right of the **\[Test Steps\]** panel in the Reliv Editor.
 
 <img src="/assets/action-block/use-action-block.png" />
 
-## 3. 액션블록 파라미터
+## 3. Action Block Parameters
 
-액션블록이 추가되는 위치에 따라서 달라져야 하는 값을, 파라미터로 지정하고 관리할 수 있습니다.
+You can define parameters to manage values that need to change depending on usage context.
 
-액션블록 내에서 [변수](/guide/write/variable)를 사용하는 것과 유사하지만,
+This is similar to using [variables](/guide/write/variable) within an action block,
 
-파라미터를 이용하면 액션블록 외부에서 변수 값을 받아와서 사용할 수 있습니다.
+but by using parameters, you can receive variable values from outside the action block and use them.
 
-### 3-1. 액션블록 파라미터 생성하기
+### 3-1. Creating Action Block Parameters
 
-액션블록 상단의 **[+ Add Parameter]** 버튼을 눌러 파라미터를 추가할 수 있습니다.
+You can add a parameter by clicking the **\[+ Add Parameter\]** button at the top of the action block.
 
-파라미터의 `Key`는 변수의 이름에, `Value`는 변수의 값에 해당합니다.
+The `Key` of the parameter corresponds to the name of the variable, and the `Value` corresponds to the value of the variable.
 
-파라미터의 값을 설정하는 방법은 [변수 생성하기](/guide/write/variable#1) 와 동일합니다.
+The method for setting the value of a parameter is the same as [creating a variable](/guide/write/variable#1).
 
-<Note>파라미터 값에서, 해당 액션 블록 상위의 변수를 사용할 수 있습니다.</Note>
+<Note>
+  You can use variables from the parent level of the action block in the
+  parameter values.
+</Note>
 
-### 3-2. 액션블록 파라미터 사용하기
+### 3-2. Using Action Block Parameters
 
-텍스트 입력창에서 `{` (중괄호)를 입력하면, 파라미터/변수/환경변수/함수 목록이 나타납니다.
+When you type `{` (curly braces) in a text input field, a list of parameters/variables/environment variables/functions will appear.
 
-클릭하여 파라미터를 삽입할 수 있습니다.
+You can click to insert a parameter.
 
 <img src="/assets/action-block/action-block-parameter.png" />

@@ -22,28 +22,28 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "홈페이지",
+    "name": "Reliv",
     "url": "https://reliv.ai/"
   },
   "tabs": [],
   "anchors": [
     {
-      "name": "Reliv 가이드 소개",
+      "name": "Reliv Guide Introduction",
       "icon": "book-open-cover",
       "url": "introduction"
     }
   ],
   "navigation": [
     {
-      "group": "Reliv 소개",
+      "group": "Reliv Guide",
       "pages": ["introduction", "getting-started", "product"]
     },
     {
-      "group": "Reliv 사용 가이드",
+      "group": "Reliv User Manual",
       "pages": [
         "guide/create",
         {
-          "group": "테스트 작성하기",
+          "group": "Writing Tests",
           "pages": [
             "guide/write/write",
             "guide/write/mutate-actions",
@@ -55,7 +55,7 @@
         },
         "guide/action-block",
         {
-          "group": "액션 고급 사용법",
+          "group": "Advanced Usage",
           "pages": ["guide/advanced/custom-action"]
         },
         "guide/run",
