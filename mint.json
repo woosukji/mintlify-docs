@@ -63,11 +63,11 @@
         },
         "guide/run",
         "guide/manage",
-        "guide/ci",
         {
           "group": "Tips",
           "pages": ["guide/tips/popup-handler"]
-        }
+        },
+        "guide/ci"
       ]
     },
     {
