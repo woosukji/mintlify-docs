@@ -41,10 +41,10 @@
     {
       "group": "Reliv User Manual",
       "pages": [
-        "guide/create",
         {
           "group": "Writing Tests",
           "pages": [
+            "guide/write/create",
             "guide/write/write",
             "guide/write/mutate-actions",
             "guide/write/action-settings",
@@ -56,10 +56,18 @@
         "guide/action-block",
         {
           "group": "Advanced Usage",
-          "pages": ["guide/advanced/custom-action"]
+          "pages": [
+            "guide/advanced/custom-action",
+            "guide/advanced/custom-selector"
+          ]
         },
         "guide/run",
-        "guide/ci"
+        "guide/manage",
+        "guide/ci",
+        {
+          "group": "Tips",
+          "pages": ["guide/tips/popup-handler"]
+        }
       ]
     },
     {
