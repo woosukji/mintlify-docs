@@ -92,6 +92,19 @@
           "env": {
             "description": "Environment",
             "type": "string"
+          },
+          "envOverride": {
+            "description": "Environment Override",
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        },
+        "example": {
+          "env": "dev",
+          "envOverride": {
+            "URL": "https://google.com"
           }
         }
       },
