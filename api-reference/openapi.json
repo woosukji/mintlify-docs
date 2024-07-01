@@ -93,8 +93,13 @@
             "description": "Environment",
             "type": "string"
           },
+          "folderId": {
+            "description": "ID of the folder to run tests in. Can be found in the URL of the folder. If not provided, all tests will be run.",
+            "type": "string",
+            "format": "uuid"
+          },
           "envOverride": {
-            "description": "Environment Override",
+            "description": "Environment map to override environment variables.",
             "type": "object",
             "additionalProperties": {
               "type": "string"
